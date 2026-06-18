@@ -1,0 +1,13 @@
+#include "darts.h"
+#include <cmath>
+
+namespace darts {
+int score (double x, double y) {
+    double distance = pow((pow(x,2) + pow(y,2)), 0.5);
+    if (distance <= 1) return 10;
+    if ((distance > 1) && (distance <= 5)) return 5;
+    if ((distance > 5) && (distance <= 10)) return 1;
+    return 0;
+}
+
+}  // namespace darts
